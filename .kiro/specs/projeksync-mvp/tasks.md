@@ -1,6 +1,6 @@
 # ProjekSync MVP V1.0 - Implementation Plan
 
-- [ ] 1. Setup project foundation and development environment
+- [-] 1. Setup project foundation and development environment
   - Initialize Git repository with proper .gitignore
   - Create monorepo structure with frontend and backend directories
   - Setup package.json files with required dependencies
