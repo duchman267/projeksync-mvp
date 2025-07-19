@@ -25,7 +25,7 @@
   - Implement basic health check endpoint
   - _Requirements: 1.2, 1.3, 1.4, 1.5, 1.6, 1.7_
 
-- [ ] 4. Build authentication API endpoints
+- [x] 4. Build authentication API endpoints
   - Implement POST /api/auth/signup endpoint with validation
   - Implement POST /api/auth/login endpoint with Supabase Auth
   - Implement POST /api/auth/logout endpoint
@@ -34,7 +34,7 @@
   - Write unit tests for authentication endpoints
   - _Requirements: 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7_
 
-- [ ] 5. Create clients management API
+- [x] 5. Create clients management API
   - Implement GET /api/clients endpoint with user filtering
   - Implement POST /api/clients endpoint with validation
   - Implement PUT /api/clients/:id endpoint for updates

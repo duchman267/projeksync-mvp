@@ -65,6 +65,63 @@ export interface SearchFilter {
   search?: string;
 }
 
+// Client types
+export interface Client extends UserOwnedRecord {
+  name: string;
+  email?: string;
+  phone?: string;
+  address?: string;
+}
+
+export interface CreateClientRequest {
+  name: string;
+  email?: string;
+  phone?: string;
+  address?: string;
+}
+
+export interface UpdateClientRequest {
+  name?: string;
+  email?: string;
+  phone?: string;
+  address?: string;
+}
+
+export interface ClientsQueryParams extends PaginationParams, SearchFilter {
+  sortBy?: 'name' | 'email' | 'created_at' | 'updated_at';
+}
+
+// Authentication types
+export interface SignupRequest {
+  email: string;
+  password: string;
+  fullName?: string;
+  businessName?: string;
+}
+
+export interface LoginRequest {
+  email: string;
+  password: string;
+}
+
+export interface AuthResponse {
+  user: User;
+  session: {
+    access_token: string;
+    refresh_token: string;
+    expires_in: number;
+    token_type: string;
+  };
+}
+
+export interface UserProfile {
+  id: string;
+  full_name?: string;
+  business_name?: string;
+  created_at: string;
+  updated_at: string;
+}
+
 // Common validation schemas
 export interface CreateRecordSchema {
   [key: string]: any;

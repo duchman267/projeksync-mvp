@@ -13,6 +13,8 @@ import { supabaseMiddleware } from './middleware/supabase';
 
 // Import routes
 import healthRoutes from './routes/health';
+import authRoutes from './routes/auth';
+import clientRoutes from './routes/clients';
 
 // Load environment variables
 dotenv.config();
@@ -85,8 +87,12 @@ app.use(supabaseMiddleware);
 // Health check routes (public)
 app.use('/health', healthRoutes);
 
+// Authentication routes (public)
+app.use('/api/auth', authRoutes);
+
 // API routes with authentication
 app.use('/api', authMiddleware);
+app.use('/api/clients', clientRoutes);
 
 // 404 handler for undefined routes
 app.use('*', (req, res) => {
